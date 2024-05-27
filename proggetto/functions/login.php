@@ -40,7 +40,7 @@ if (pg_num_rows($result) > 0) {
     if ($role == 'lettore') {
         header("Location: ../lettore/lettore_home.php");
     } else if ($role == 'bibliotecario') {
-        header("Location: bibliotecario_home.php");
+        header("Location: ../bibliotecario/bibliotecario_home.php");
     }
 } else {
     echo "Invalid username or password.";
