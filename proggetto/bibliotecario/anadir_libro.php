@@ -11,6 +11,9 @@
             <label for="Titulo">Titulo:</label>
             <input type="text" id="titulo" name="titulo" required>
             <br>
+            <label for="Autor">Autor:</label>
+            <input type="text" id="autor" name="autor" required>
+            <br>
         </form>
 
     </body>
