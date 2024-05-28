@@ -7,6 +7,9 @@
 <body>
     <h1>ciao bibliotecario</h1>
 
+    <form action="gestion_libros.php" method ="get">
+        <input type="submit" value ="Gestionar libros">
     </form>
+
 </body>
 </html>

@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>tus_reservas</title>
+        <title>Añadir_libros</title>
     </head>
     <body>
 
-        <h1>tus reservas</h1>
+        <h1>Añadir libros </h1>
 
     </body>
 </html>
