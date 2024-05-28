@@ -14,6 +14,18 @@
             <label for="Autor">Autor:</label>
             <input type="text" id="autor" name="autor" required>
             <br>
+            <label for="edicion">Edicion:</label>
+            <input type="text"id="edicion" name="edicion" required>
+            <br>
+            <label for="descripcion">Descripcion:</label>
+            <input type="text"id="descripcion" name="descripcion" required>
+            <br>
+            <select name="genero" id="genero" required>
+                <option value=""></option>
+
+            </select>
+            <input type="submit" value="Login">
+
         </form>
 
     </body>
