@@ -29,7 +29,8 @@
                 <option value="Biografía">Biografía</option>
                 <option value="Romance">Romance</option>
             </select>
-            <input type="submit" value="Login">
+            <br>
+            <input type="submit" value="Añadir libro">
 
         </form>
 
