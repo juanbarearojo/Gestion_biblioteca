@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>home_lettore</title>
+    <title>tus_reservas</title>
 </head>
 <body>
-    <h1>ciao lettore</h1>
 
-    <form action="reservas_usuario.php" method="get">
+    <form action="tus_reservas.php" method="get">
         <input type="submit" value="Ver tus reservas">
     </form>
+    <h1>tus reservas</h1>
+
 
 </body>
 </html>
