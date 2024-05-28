@@ -21,8 +21,9 @@
             <input type="text"id="descripcion" name="descripcion" required>
             <br>
             <select name="genero" id="genero" required>
-                <option value=""></option>
-
+                <option value="Ficción">Ficción</option>
+                <option value="No Ficción">No Ficción</option>
+                <option value="Fantasía">Fantasía</option>
             </select>
             <input type="submit" value="Login">
 
