@@ -28,7 +28,8 @@ $result = pg_execute($db, "insert_sql", array($titulo, $autor, $edicion, $descri
 if ($result === false) {
     die("Fallo al ejecutar el query: " . pg_last_error());
 } else {
-    header("Location: ../bibliotecario/gestion_libros.php");
+    echo "<script>alert('Libro insertado con éxito');</script>";
+    echo "<script>window.location.href = '../bibliotecario/gestion_libros.php';</script>";
 }
 
 // Liberar el resultado y cerrar la conexión
