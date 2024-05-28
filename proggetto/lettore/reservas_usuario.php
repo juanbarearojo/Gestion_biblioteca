@@ -6,9 +6,6 @@
 </head>
 <body>
 
-    <form action="tus_reservas.php" method="get">
-        <input type="submit" value="Ver tus reservas">
-    </form>
     <h1>tus reservas</h1>
 
 
