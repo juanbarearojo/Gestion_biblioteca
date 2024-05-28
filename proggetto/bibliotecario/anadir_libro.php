@@ -24,6 +24,10 @@
                 <option value="Ficción">Ficción</option>
                 <option value="No Ficción">No Ficción</option>
                 <option value="Fantasía">Fantasía</option>
+                <option value="Ciencia Ficción">Ciencia Ficción</option>
+                <option value="Misterio">Misterio</option>
+                <option value="Biografía">Biografía</option>
+                <option value="Romance">Romance</option>
             </select>
             <input type="submit" value="Login">
 
