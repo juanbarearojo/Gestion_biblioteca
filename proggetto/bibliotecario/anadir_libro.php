@@ -7,11 +7,11 @@
     <body>
 
         <h1>Añadir libros </h1>
-        <form action="../functions/anadir_libro_function" method="post">
-            <label for="Titulo">Titulo:</label>
+        <form action="../functions/anadir_libro_function.php" method="post">
+            <label for="titulo">Titulo:</label>
             <input type="text" id="titulo" name="titulo" required>
             <br>
-            <label for="Autor">Autor:</label>
+            <label for="autor">Autor:</label>
             <input type="text" id="autor" name="autor" required>
             <br>
             <label for="edicion">Edicion:</label>
