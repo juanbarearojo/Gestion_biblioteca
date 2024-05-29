@@ -1,15 +1,22 @@
+<?php
+session_start(); // Iniciar la sesión antes de cualquier salida
+
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'bibliotecario';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>home_lettore</title>
+        <title>Home_lettore</title>
     </head>
     <body>
-        <h1>ciao bibliotecario</h1>
+        <h1>Ciao, <?php echo htmlspecialchars($username); ?>!</h1>
 
-        <form action="gestion_libros.php" method ="get">
-            <input type="submit" value ="Gestionar libros">
+        <form action="gestion_libros.php" method="get">
+            <input type="submit" value="Gestionar libros">
         </form>
-
+        <form action="profilo_bibliotecario.php" method="get">
+            <input type="submit" value="Il tuo profilo">
+        </form>
     </body>
 </html>
