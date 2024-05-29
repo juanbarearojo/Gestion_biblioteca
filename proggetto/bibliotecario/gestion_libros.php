@@ -10,5 +10,11 @@
         <form action="anadir_libro.php" method="get">
             <input type="submit" value = "Añadir libros">
         </form>
+        <br>
+        <form action="eliminar_libro.php" method = "get">
+            <input type="submit" value = "Eliminar libros">
+        </form>
+
+
     </body>
 </html>
