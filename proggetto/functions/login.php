@@ -41,6 +41,7 @@ if (pg_num_rows($result) > 0) {
     // Login exitoso, guardar el nombre de usuario en la sesión
     $_SESSION['username'] = $username;
     
+    
     // Redirigir según el rol
     if ($role == 'lettore') {
         header("Location: ../lettore/lettore_home.php");
