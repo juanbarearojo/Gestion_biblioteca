@@ -10,7 +10,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'bibliotecari
         <title>Home_lettore</title>
     </head>
     <body>
-        <h1>Ciao, <?php echo htmlspecialchars($username); ?>!</h1>
+        <h1>Ciao, <?php echo $username; ?>!</h1>
 
         <form action="gestion_libros.php" method="get">
             <input type="submit" value="Gestionar libros">
