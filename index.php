@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="uk-container uk-margin-top">
-        <h2>Login</h2>
+        <h1>Login</h1>
         <form action="progetto/functions/login.php" method="post" class="uk-form-stacked">
             <div class="uk-margin">
                 <label class="uk-form-label" for="username">Username:</label>
