@@ -40,8 +40,8 @@ if ($result === false) {
 if (pg_num_rows($result) > 0) {
     // Login exitoso, guardar el nombre de usuario en la sesión
     $_SESSION['username'] = $username;
-    $_SESSION['password'] = $username;
-    $_SESSION['role'] = $username;
+    $_SESSION['password'] = $password;
+    $_SESSION['role'] = $role;
 
     
     

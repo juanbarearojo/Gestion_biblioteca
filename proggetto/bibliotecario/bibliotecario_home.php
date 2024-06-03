@@ -7,7 +7,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'bibliotecari
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Home_lettore</title>
+        <title>Home_Bibliotecario</title>
     </head>
     <body>
         <h1>Ciao, <?php echo $username; ?>!</h1>
