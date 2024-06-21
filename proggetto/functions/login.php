@@ -20,10 +20,10 @@ $password = $_POST['password'];
 $role = $_POST['role'];
 
 // Determinar la tabla según el rol
-$table = $role == 'lettore' ? 'lettore_table' : 'bibliotecario_table';
+$table = $role == 'lettore' ? 'reader' : 'bibliotecario';
 
 // Preparar y ejecutar la consulta SQL
-$sql = "SELECT * FROM $table WHERE usuario = $1 AND password = $2";
+$sql = "SELECT * FROM $table WHERE username = $1 AND password = $2";
 $result = pg_prepare($db, "login_query", $sql);
 
 if ($result === false) {
