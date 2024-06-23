@@ -14,9 +14,9 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'bibliotecari
     <div class="container mt-5">
         <h1 class="display-4 text-center">Ciao <?php echo $username;?></span></h1>
 
-        <form action="reservas_usuario.php" method="get" class="mt-4">
+        <form action="search_book.php" method="get" class="mt-4">
             <div class="form-group text-center">
-                <input class="btn btn-primary btn-lg" type="submit" value="Ver tus reservas">
+                <input class="btn btn-primary btn-lg" type="submit" value="Search book">
             </div>
         </form>
         <form action="profilo_lettore.php" method="get" class="mt-4">
