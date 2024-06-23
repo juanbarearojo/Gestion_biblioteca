@@ -11,20 +11,19 @@ if (!$db) {
 }
 
 // Obtener datos de los formularios
-$titulo = $_POST['titulo'];
-$autor = $_POST['autor'];
-$edicion = $_POST['edicion'];
-$descripcion = $_POST['descripcion'];
-$genero = $_POST['genero'];
+$isbn= $_POST['ISBN'];
+$title = $_POST['title'];
+$summary = $_POST['summary'];
+$publisher = $_POST['publisher'];
 
-$sql = "INSERT INTO libros_table(titulo, autor, edición, descripcion, genero) VALUES ($1, $2, $3, $4, $5)";
+$sql = "INSERT INTO book(isbn, title, summary, publisher) VALUES ($1, $2, $3, $4)";
 $result = pg_prepare($db, "insert_sql", $sql);
 
 if ($result === false) {
     die("Fallo al preparar el query: " . pg_last_error());
 }
 
-$result = pg_execute($db, "insert_sql", array($titulo, $autor, $edicion, $descripcion, $genero));
+$result = pg_execute($db, "insert_sql", array($isbn, $title, $summary, $publisher));
 if ($result === false) {
     die("Fallo al ejecutar el query: " . pg_last_error());
 } else {

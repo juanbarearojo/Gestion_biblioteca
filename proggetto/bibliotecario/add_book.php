@@ -9,7 +9,7 @@
 
 <div class="container mt-5">
     <h1 class="mb-4">Add Book</h1>
-    <form action="../functions/anadir_libro_function.php" method="post">
+    <form action="../functions/add_book_function.php" method="post">
         <div class="form-group">
             <label for="ISBN">ISBN:</label>
             <input type="text" class="form-control" id="ISBN" name="ISBN" required>
