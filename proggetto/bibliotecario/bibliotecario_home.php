@@ -21,8 +21,8 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'bibliotecari
             <form action="profilo_bibliotecario.php" method="get" class="my-4">
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="Il tuo profilo">
             </form>
-            <form action="create_user.php" method="get" class="my-4">
-                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Create User">
+            <form action="manage_readers.php" method="get" class="my-4">
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Manage Readers">
             </form>
         </div>
         

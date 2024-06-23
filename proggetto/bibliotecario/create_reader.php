@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Añadir_libros</title>
+    <title>Añadir lector</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="container mt-5">
-    <h1 class="mb-4">Add Book</h1>
+    <h1 class="mb-4">Add reader</h1>
     <form action="../functions/create_reader_function.php" method="post">
         <div class="form-group">
             <label for="fiscal_code">Fiscal Code:</label>
@@ -31,13 +31,13 @@
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
         <div class="form-group">
-            <label for="role">Role:</label>
-            <select class="form-control" id="role" name="role" required>
+            <label for="services">Services:</label>
+            <select class="form-control" id="services" name="services" required>
                 <option value="basic">Basic</option>
                 <option value="premium">Premium</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Add Book</button>
+        <button type="submit" class="btn btn-primary">Add reader</button>
     </form>
 </div>
 
