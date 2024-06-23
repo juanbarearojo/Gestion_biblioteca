@@ -48,7 +48,7 @@ if (pg_num_rows($result) > 0) {
     $row = pg_fetch_assoc($result);
     
     // Guardar la fila en la sesión
-    $_SESSION['found_row'] = $row;
+    $_SESSION['book_found_row'] = $row;
 
     // Redirigir a la página de resultados
     header("Location: ../lettore/found_book.php");

@@ -7,8 +7,8 @@
     <body>
         <h1>Gestion libros</h1>
 
-        <form action="anadir_libro.php" method="get">
-            <input type="submit" value = "Añadir libros">
+        <form action="add_book.php" method="get">
+            <input type="submit" value = "Add Book">
         </form>
         <br>
         <form action="eliminar_libro.php" method = "get">
