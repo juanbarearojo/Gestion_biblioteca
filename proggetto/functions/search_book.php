@@ -17,7 +17,7 @@ if (!$db) {
 // Obtener datos del formulario
 $ISBN = $_POST['ISBN'];
 $title = $_POST['title'];
-$table = "books"; // Asumiendo que la tabla se llama "books"
+$table = "book"; 
 
 // Preparar y ejecutar la consulta SQL
 if (!empty($ISBN)) {
