@@ -29,8 +29,8 @@ $result = pg_execute($db, "insert_sql", array(fiscal_code, first_name, last_name
 if ($result === false) {
     die("Fallo al ejecutar el query: " . pg_last_error());
 } else {
-    echo "<script>alert('Add book No error');</script>";
-    echo "<script>window.location.href = '../bibliotecario/gestion_libros.php';</script>";
+    echo "<script>alert('Add reader without errors');</script>";
+    echo "<script>window.location.href = '../bibliotecario/manage_readers.php';</script>";
 }
 
 // Liberar el resultado y cerrar la conexión
