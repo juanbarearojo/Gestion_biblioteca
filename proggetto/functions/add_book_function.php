@@ -27,7 +27,7 @@ $result = pg_execute($db, "insert_sql", array($isbn, $title, $summary, $publishe
 if ($result === false) {
     die("Fallo al ejecutar el query: " . pg_last_error());
 } else {
-    echo "<script>alert('Libro insertado con éxito');</script>";
+    echo "<script>alert('Add book No error');</script>";
     echo "<script>window.location.href = '../bibliotecario/gestion_libros.php';</script>";
 }
 
