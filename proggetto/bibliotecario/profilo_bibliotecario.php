@@ -21,7 +21,7 @@ $password = isset($_SESSION['password']) ? $_SESSION['password'] : 'N/A';
     </div>
 
     <div class="container mt-4" style="max-width: 500px;">
-        <form action="../functions/login.php" method="post">
+        <form action="../functions/change_password.php" method="post">
             <div class="form-group">
                 <label for="password">New Password:</label>
                 <input class="form-control" type="password" id="password" name="password" required>
