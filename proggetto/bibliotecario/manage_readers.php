@@ -19,6 +19,9 @@
             <form action="eliminate_reader.php" method="get" class="my-4">
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="Eliminate reader from system">
             </form>
+            <form action="bibliotecario_home.php" method="get" class="my-4">
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Go back">
+            </form>
         </div>
         
         <!-- Incluir JS de Bootstrap y sus dependencias -->
