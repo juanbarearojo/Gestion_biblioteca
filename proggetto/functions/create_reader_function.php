@@ -18,14 +18,14 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $services = $_POST['services'];
 
-$sql = "INSERT INTO reader(fiscal_code, first_name, last_name, services,username,pasword) VALUES ($1, $2, $3, $4,$5,$6)";
+$sql = "INSERT INTO reader(fiscal_code, first_name, last_name, services,username,password) VALUES ($1, $2, $3, $4,$5,$6)";
 $result = pg_prepare($db, "insert_sql", $sql);
 
 if ($result === false) {
     die("Fallo al preparar el query: " . pg_last_error());
 }
 
-$result = pg_execute($db, "insert_sql", array(fiscal_code, first_name, last_name, services,username,pasword));
+$result = pg_execute($db, "insert_sql", array($fiscal_code, $first_name, $last_name, $services,$username,$password));
 if ($result === false) {
     die("Fallo al ejecutar el query: " . pg_last_error());
 } else {

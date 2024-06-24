@@ -23,7 +23,7 @@
             <input type="text" class="form-control" id="last_name" name="last_name" required>
         </div>
         <div class="form-group">
-            <label for="username">Publisher:</label>
+            <label for="username">Username:</label>
             <input type="text" class="form-control" id="username" name="username" required>
         </div>
         <div class="form-group">

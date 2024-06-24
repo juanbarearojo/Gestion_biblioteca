@@ -13,6 +13,12 @@
             <form action="create_reader.php" method="get" class="my-4">
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="Create a reader account">
             </form>
+            <form action="eliminate_debt.php" method="get" class="my-4">
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Eliminate reader debt">
+            </form>
+            <form action="eliminate_reader.php" method="get" class="my-4">
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Eliminate reader from system">
+            </form>
         </div>
         
         <!-- Incluir JS de Bootstrap y sus dependencias -->
