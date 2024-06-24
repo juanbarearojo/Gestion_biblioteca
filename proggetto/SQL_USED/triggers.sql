@@ -1,25 +1,3 @@
---Blocco prestiti a lettori ritardatari.
-CREATE OR REPLACE FUNCTION check_overdue_count()
-RETURNS TRIGGER AS $$
-BEGIN
-    -- Check the overdue_count of the reader trying to borrow a book
-    IF (SELECT overdue_count FROM reader WHERE fiscal_code = NEW.fiscal_code) >= 5 THEN
-        -- If the reader has 5 or more overdue returns, raise an exception
-        RAISE EXCEPTION 'Cannot lend to a reader with 5 or more overdue returns.';
-    END IF;
-
-    -- If the reader has less than 5 overdue returns, allow the insert
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER before_insert_loan
-BEFORE INSERT ON loan
-FOR EACH ROW
-EXECUTE FUNCTION check_overdue_count();
-
-
-
 -- Ritardi nelle restituzioni.
 CREATE OR REPLACE FUNCTION update_overdue_count()
 RETURNS TRIGGER AS $$
@@ -58,7 +36,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Crear el trigger revisado
 CREATE TRIGGER before_update_loan
 BEFORE UPDATE ON loan
 FOR EACH ROW
@@ -87,6 +64,8 @@ AFTER INSERT ON loan
 FOR EACH ROW
 EXECUTE FUNCTION update_copy_status();
 
+
+
 -- Update status after returning copy
 CREATE OR REPLACE FUNCTION update_copy_status_to_available()
 RETURNS TRIGGER AS $$
@@ -101,11 +80,76 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Crear el trigger
 CREATE TRIGGER after_update_loan_return
 AFTER UPDATE ON loan
 FOR EACH ROW
 WHEN (OLD.actual_return_date IS NULL AND NEW.actual_return_date IS NOT NULL)
 EXECUTE FUNCTION update_copy_status_to_available();
+
+
+
+--Statistiche per ogni sede.
+CREATE OR REPLACE FUNCTION statistiche_per_ogni_sede(branch_id INTEGER)
+RETURNS TABLE (
+    total_copies BIGINT,
+    total_isbns BIGINT,
+    total_loans_in_progress BIGINT
+) AS $$
+BEGIN
+    RETURN QUERY
+    SELECT
+        -- Número total de ejemplares gestionados por la sucursal
+        (SELECT COUNT(*) FROM copy WHERE library_id = branch_id) AS total_copies,
+        
+        -- Número total de códigos ISBN gestionados por la sucursal
+        (SELECT COUNT(DISTINCT isbn) FROM copy WHERE library_id = branch_id) AS total_isbns,
+        
+        -- Número total de préstamos en curso para los volúmenes mantenidos por la sucursal
+        (SELECT COUNT(*) FROM copy WHERE library_id = branch_id AND status = 'loaned') AS total_loans_in_progress;
+END;
+$$ LANGUAGE plpgsql;
+
+
+--Ritardi per ogni sede.
+CREATE OR REPLACE FUNCTION ritardi_per_ogni_sede(branch_id INTEGER)
+RETURNS TABLE (
+    copy_id INTEGER,
+    isbn VARCHAR(13),
+    title VARCHAR(255),
+    reader_fiscal_code VARCHAR(20),
+    reader_name VARCHAR(200),
+    expected_return_date DATE,
+    actual_return_date DATE
+) AS $$
+BEGIN
+    RETURN QUERY
+    SELECT
+        c.copy_id,
+        c.isbn,
+        b.title,
+        r.fiscal_code AS reader_fiscal_code,
+        CAST(CONCAT(r.first_name, ' ', r.last_name) AS VARCHAR(200)) AS reader_name,
+        l.expected_return_date,
+        l.actual_return_date
+    FROM
+        loan l
+    JOIN
+        copy c ON l.copy_id = c.copy_id
+    JOIN
+        book b ON c.isbn = b.isbn
+    JOIN
+        reader r ON l.fiscal_code = r.fiscal_code
+    WHERE
+        c.library_id = branch_id
+        AND l.actual_return_date IS NULL
+        AND l.expected_return_date < CURRENT_DATE;
+END;
+$$ LANGUAGE plpgsql;
+
+
+
+
+
+
 
 
