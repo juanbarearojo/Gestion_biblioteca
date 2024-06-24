@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>Return a loan</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .go-back-btn {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    font-size: 35px;
+                    background-color: #ff9800;
+                    color: white;
+        }
+    </style>
 </head>
 <body>
 

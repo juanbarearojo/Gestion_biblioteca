@@ -11,6 +11,16 @@ $password = isset($_SESSION['password']) ? $_SESSION['password'] : 'N/A';
     <title>Il tuo profilo</title>
     <!-- Incluir CSS de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        .go-back-btn {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    font-size: 35px;
+                    background-color: #ff9800;
+                    color: white;
+        }
+    </style>
 </head>
 <body>
 

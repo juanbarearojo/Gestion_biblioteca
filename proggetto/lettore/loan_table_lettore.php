@@ -63,6 +63,16 @@ while ($row = pg_fetch_assoc($result)) {
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <title>Found Loans</title>
+    <style>
+        .go-back-btn {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    font-size: 35px;
+                    background-color: #ff9800;
+                    color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
