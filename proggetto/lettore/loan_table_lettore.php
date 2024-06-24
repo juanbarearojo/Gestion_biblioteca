@@ -1,7 +1,5 @@
 <?php
 session_start(); // Iniciar la sesión antes de cualquier salida
-$username = $_SESSION['username'];
-
 
 // Función para abrir la conexión a PostgreSQL
 
@@ -18,11 +16,27 @@ if (!$db) {
 // Configurar el search_path para asegurar el esquema correcto
 $result = pg_query($db, 'SET SEARCH_PATH TO public');
 
-// Consulta para obtener los datos de préstamos
-$sql = "SELECT copy_id, fiscal_code, loan_date, actual_return_date, expected_return_date FROM juan_barearojo.loan" ;
+// Obtener el username de la sesión
+$username = $_SESSION['username'];
+
+// Consulta para obtener el fiscal_code correspondiente al username
+$fiscal_code_query = "SELECT fiscal_code FROM juan_barearojo.reader WHERE username = $1";
+$fiscal_code_result = pg_query_params($db, $fiscal_code_query, array($username));
+
+if (!$fiscal_code_result) {
+    die("Query failed: " . pg_last_error());
+}
+
+$fiscal_code_row = pg_fetch_assoc($fiscal_code_result);
+$fiscal_code = $fiscal_code_row['fiscal_code'];
+
+// Consulta para obtener los datos de préstamos del usuario
+$sql = "SELECT copy_id, fiscal_code, loan_date, actual_return_date, expected_return_date 
+        FROM juan_barearojo.loan 
+        WHERE fiscal_code = $1";
 
 // Ejecutar la consulta
-$result = pg_query($db, $sql);
+$result = pg_query_params($db, $sql, array($fiscal_code));
 
 if (!$result) {
     die("Query failed: " . pg_last_error());

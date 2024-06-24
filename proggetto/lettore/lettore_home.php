@@ -16,12 +16,17 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'bibliotecari
 
         <form action="search_book_ui.php" method="get" class="mt-4">
             <div class="form-group text-center">
-                <input class="btn btn-primary btn-lg" type="submit" value="Search book">
+                <input class="btn btn-primary btn-lg" type="submit" value="Search a book">
             </div>
         </form>
         <form action="profilo_lettore.php" method="get" class="mt-4">
             <div class="form-group text-center">
-                <input class="btn btn-primary btn-lg" type="submit" value="Profile">
+                <input class="btn btn-primary btn-lg" type="submit" value="Your Profile">
+            </div>
+        </form>
+        <form action="manage_loans_lettore.php" method="get" class="mt-4">
+            <div class="form-group text-center">
+                <input class="btn btn-primary btn-lg" type="submit" value="Loans">
             </div>
         </form>
     </div>
