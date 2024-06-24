@@ -19,7 +19,7 @@
             <form action="eliminate_copy.php" method="get" class="my-4">
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="Eliminate copy from one library">
             </form>
-            <form action="upadte_location_copy.php" method="get" class="my-4">
+            <form action="update_location_copy.php" method="get" class="my-4">
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="Modify location copy">
             </form>
             <form action="bibliotecario_home.php" method="get" class="my-4">

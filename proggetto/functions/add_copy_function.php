@@ -12,22 +12,21 @@ if (!$db) {
 
 // Obtener datos de los formularios
 $isbn= $_POST['ISBN'];
-$title = $_POST['title'];
-$summary = $_POST['summary'];
-$publisher = $_POST['publisher'];
+$libray_id= $_POST['library_id'];
 
-$sql = "INSERT INTO book(isbn, title, summary, publisher) VALUES ($1, $2, $3, $4)";
+
+$sql = "INSERT INTO copy(isbn, library_id) VALUES ($1, $2)";
 $result = pg_prepare($db, "insert_sql", $sql);
 
 if ($result === false) {
     die("Fallo al preparar el query: " . pg_last_error());
 }
 
-$result = pg_execute($db, "insert_sql", array($isbn, $title, $summary, $publisher));
+$result = pg_execute($db, "insert_sql", array($isbn, $libray_id));
 if ($result === false) {
     die("Fallo al ejecutar el query: " . pg_last_error());
 } else {
-    echo "<script>alert('Add book No error');</script>";
+    echo "<script>alert('Add copy of book No error');</script>";
     echo "<script>window.location.href = '../bibliotecario/manage_books.php';</script>";
 }
 
