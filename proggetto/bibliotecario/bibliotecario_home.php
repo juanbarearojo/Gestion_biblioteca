@@ -27,6 +27,9 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'bibliotecari
             <form action="library_statistics.php" method="get" class="my-4">
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="See statistics">
             </form>
+            <form action="manage_loans.php" method="get" class="my-4">
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Manage loans">
+            </form>
         </div>
         
         <!-- Incluir JS de Bootstrap y sus dependencias -->

@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Home_Bibliotecario</title>
+        <title>Manage Loans</title>
         <!-- Incluir CSS de Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     </head>
     <body>
         <div class="container mt-5">
-            <h1 class="display-4">Manage Readers</h1>
+            <h1 class="display-4">Manage Loans</h1>
 
             <form action="add_book.php" method="get" class="my-4">
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="Add book to the database">
