@@ -2,16 +2,16 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Manage books</title>
+        <title>Manage Loans</title>
         <!-- Incluir CSS de Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     </head>
     <body>
         <div class="container mt-5">
-            <h1 class="display-4">Manage Books</h1>
+            <h1 class="display-4">Manage Loans</h1>
 
-            <form action="add_book.php" method="get" class="my-4">
-                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Add book to the database">
+            <form action="loan_table.php" method="get" class="my-4">
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="All loans">
             </form>
             <form action="extension_loan.php" method="get" class="my-4">
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="Extension of Loan">

@@ -15,18 +15,18 @@ $fiscal_code = $_POST['fiscal_code'];
 $copy_id = $_POST['copy_id'];
 $loan_date = $_POST['loan_date'];
 
-$sql = "UPDATE loan SET expected_return_date = CURRENT_DATE + '10 days'::interval WHERE fiscal_code = $1" and copy_id = $2 and loan_date = $3;
+$sql = "UPDATE loan SET expected_return_date = CURRENT_DATE + INTERVAL '10 days' WHERE fiscal_code = $1 AND copy_id = $2 AND loan_date = $3";
 $result = pg_prepare($db, "update_sql", $sql);
 
 if ($result === false) {
     die("Fallo al preparar el query: " . pg_last_error());
 }
 
-$result = pg_execute($db, "update_sql", array($fiscal_code,$copy_id,$loan_date));
+$result = pg_execute($db, "update_sql", array($fiscal_code, $copy_id, $loan_date));
 if ($result === false) {
     die("Fallo al ejecutar el query: " . pg_last_error());
 } else {
-    echo "<script>alert('Loan extendented successfully');</script>";
+    echo "<script>alert('Loan extended successfully');</script>";
     echo "<script>window.location.href = '../bibliotecario/manage_loans.php';</script>";
 }
 
