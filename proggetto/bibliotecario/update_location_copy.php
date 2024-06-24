@@ -15,11 +15,11 @@
             <input type="text" class="form-control" id="isbn" name="isbn" required>
         </div>
         <div class="form-group">
-            <label for="library_id">Old library id:</label>
+            <label for="old_library_id">Old library id:</label>
             <input type="text" class="form-control" id="old_library_id" name="old_library_id" required>
         </div>
         <div class="form-group">
-            <label for="library_id">New library id:</label>
+            <label for="new_library_id">New library id:</label>
             <input type="text" class="form-control" id="new_library_id" name="new_library_id" required>
         </div>
         <button type="submit" class="btn btn-primary">Update location from one copy</button>
