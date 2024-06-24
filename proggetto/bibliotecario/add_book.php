@@ -8,7 +8,7 @@
 <body>
 
 <div class="container mt-5">
-    <h1 class="mb-4">Add Book</h1>
+    <h1 class="mb-4">Add Book to the database</h1>
     <form action="../functions/add_book_function.php" method="post">
         <div class="form-group">
             <label for="ISBN">ISBN:</label>

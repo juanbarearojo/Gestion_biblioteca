@@ -31,9 +31,6 @@ $password = isset($_SESSION['password']) ? $_SESSION['password'] : 'N/A';
             </div>
         </form>
     </div>
-    <form action="bibliotecario_home.php" method="get" class="my-4">
-                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Go back">
-    </form>
 
     <!-- Incluir JS de Bootstrap y sus dependencias -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
