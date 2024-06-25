@@ -26,7 +26,7 @@ if ($result === false) {
     die("Fallo al ejecutar el query: " . pg_last_error());
 } else {
     echo "<script>alert('Return book successfull');</script>";
-    echo "<script>window.location.href = '../lettore/manage_loans_lettore.php';</script>";
+    echo "<script>window.location.href = '../lettore/manage_loans.php';</script>";
 }
 
 // Liberar el resultado y cerrar la conexión

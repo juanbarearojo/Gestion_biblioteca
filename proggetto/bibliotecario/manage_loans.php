@@ -26,6 +26,9 @@
             <form action="extension_loan.php" method="get" class="my-4">
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="Extension of Loan">
             </form>
+            <form action="return_loan.php" method="get" class="my-4">
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Return a copy">
+            </form>
         </div>
         
         <a href="bibliotecario_home.php" class="btn go-back-btn">Go HOME</a>
