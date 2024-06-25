@@ -23,7 +23,7 @@
             <form id="libraryForm" method="post">
                 <div class="form-group">
                     <label for="library_id">Library ID:</label>
-                    <input class="form-control" type="text" id="library_id" name="libray_id" required>
+                    <input class="form-control" type="text" id="library_id" name="branch_id" required>
                 </div>
                 <div class="form-group text-center">
                     <button type="button" class="btn btn-primary btn-lg" onclick="submitForm('statistiche')">Statistiche per sede</button>
@@ -40,9 +40,9 @@
             function submitForm(searchType) {
                 const form = document.getElementById('libraryForm');
                 if (searchType === 'statistiche') {
-                    form.action = '../functions/statistiche_per_ogni_sede_function.php';
+                    form.action = 'statistiche_per_ogni_sede.php';
                 } else if (searchType === 'ritardi') {
-                    form.action = '../functions/ritardi_per_ogni_sede_function.php';
+                    form.action = 'ritardi_per_ogni_sede.php';
                 }
                 form.submit();
             }

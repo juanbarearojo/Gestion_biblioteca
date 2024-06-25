@@ -99,13 +99,13 @@ BEGIN
     RETURN QUERY
     SELECT
         -- Número total de ejemplares gestionados por la sucursal
-        (SELECT COUNT(*) FROM copy WHERE library_id = branch_id) AS total_copies,
+        (SELECT COUNT(*) FROM juan_barearojo.copy WHERE library_id = branch_id) AS total_copies,
         
         -- Número total de códigos ISBN gestionados por la sucursal
-        (SELECT COUNT(DISTINCT isbn) FROM copy WHERE library_id = branch_id) AS total_isbns,
+        (SELECT COUNT(DISTINCT isbn) FROM juan_barearojo.copy WHERE library_id = branch_id) AS total_isbns,
         
         -- Número total de préstamos en curso para los volúmenes mantenidos por la sucursal
-        (SELECT COUNT(*) FROM copy WHERE library_id = branch_id AND status = 'loaned') AS total_loans_in_progress;
+        (SELECT COUNT(*) FROM juan_barearojo.copy WHERE library_id = branch_id AND status = 'loaned') AS total_loans_in_progress;
 END;
 $$ LANGUAGE plpgsql;
 
@@ -132,13 +132,13 @@ BEGIN
         l.expected_return_date,
         l.actual_return_date
     FROM
-        loan l
+        juan_barearojo.loan l
     JOIN
-        copy c ON l.copy_id = c.copy_id
+        juan_barearojo.copy c ON l.copy_id = c.copy_id
     JOIN
-        book b ON c.isbn = b.isbn
+        juan_barearojo.book b ON c.isbn = b.isbn
     JOIN
-        reader r ON l.fiscal_code = r.fiscal_code
+        juan_barearojo.reader r ON l.fiscal_code = r.fiscal_code
     WHERE
         c.library_id = branch_id
         AND l.actual_return_date IS NULL
