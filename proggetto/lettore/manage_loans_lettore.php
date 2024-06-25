@@ -23,7 +23,7 @@
             <form action="loan_table_lettore.php" method="get" class="my-4">
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="All your loans">
             </form>
-            <form action="extension_loan.php" method="get" class="my-4">
+            <form action="ask_loan.php" method="get" class="my-4">
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="Ask for a loan">
             </form>
 
