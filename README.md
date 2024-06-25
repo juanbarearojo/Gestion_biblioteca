@@ -1,42 +1,42 @@
-# Proyecto de Gestión de Biblioteca 📚
+# Library Management Project 📚
 
-## Descripción del Proyecto
-Este proyecto tiene como objetivo desarrollar una aplicación de base de datos para la gestión de una biblioteca distribuida en diferentes ubicaciones. La aplicación permite a los lectores registrados visualizar información sobre los catálogos y solicitar préstamos de libros, mientras que los bibliotecarios pueden gestionar los libros y ubicaciones, así como registrar devoluciones.
+## Project Description
+This project aims to develop a database application for managing a library distributed across different locations. The application allows registered readers to view catalog information and request book loans, while librarians can manage books and locations, as well as register returns.
 
-## Funcionalidades Principales
-1. **Lectores**:
-   - Consultar información sobre los libros del catálogo.
-   - Solicitar préstamos de libros especificando el título o el código ISBN.
-   - Especificar una ubicación preferida para el préstamo.
+## Main Features
+1. **Readers**:
+   - View information about the library's catalog.
+   - Request book loans by specifying the title or ISBN.
+   - Specify a preferred location for the loan.
 
-2. **Bibliotecarios**:
-   - Administrar información sobre los lectores y libros.
-   - Insertar y gestionar ubicaciones y libros.
-   - Ampliar la duración de los préstamos.
-   - Eliminar morosidades de los lectores.
+2. **Librarians**:
+   - Manage information about readers and books.
+   - Insert and manage locations and books.
+   - Extend loan durations.
+   - Remove readers' overdue penalties.
 
-3. **Gestión de Biblioteca**:
-   - La biblioteca está distribuida en diferentes ubicaciones, identificadas por un código único.
-   - Mantiene información detallada sobre los libros, incluyendo ISBN, título, autores, argumento y editorial.
-   - Control de disponibilidad de los libros y su gestión por ubicaciones.
-   - Restricciones de préstamos basadas en la cantidad de devoluciones atrasadas y el número máximo de volúmenes prestados.
+3. **Library Management**:
+   - The library is distributed across different locations, identified by a unique code.
+   - Maintains detailed information about books, including ISBN, title, authors, summary, and publisher.
+   - Controls the availability of books and manages them by locations.
+   - Loan restrictions based on the number of overdue returns and the maximum number of volumes loaned.
 
-## Tecnologías Utilizadas
-- **Base de Datos**: PostgreSQL, PL/pgSQL
+## Technologies Used
+- **Database**: PostgreSQL, PL/pgSQL
 - **Backend**: PHP
-- **Frontend**: HTML
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- **Admin Tool**: phpPgAdmin
 
-## Uso de la Aplicación
-### Acceso a la Aplicación
-- **Bibliotecarios**: Acceden mediante nombre de usuario y contraseña, pueden cambiar su contraseña y gestionar cuentas de usuarios.
-- **Lectores**: Acceden mediante nombre de usuario y contraseña, pueden cambiar su contraseña y solicitar préstamos de libros.
+## Application Usage
+### Access to the Application
+- **Librarians**: Access the application using a username and password, can change their password, and manage user accounts.
+- **Readers**: Access the application using a username and password, can change their password, and request book loans.
 
-### Funcionalidades
-- **Solicitar Préstamos**: Los lectores pueden especificar el ISBN o el título de un libro y solicitar su préstamo. Pueden indicar una ubicación preferida.
-- **Gestión de Libros y Ubicaciones**: Los bibliotecarios pueden añadir nuevos libros, eliminar libros no mantenidos, y gestionar las diferentes ubicaciones de la biblioteca.
+### Features
+- **Request Loans**: Readers can specify the ISBN or title of a book and request its loan. They can indicate a preferred location.
+- **Manage Books and Locations**: Librarians can add new books, remove books no longer maintained, and manage the different library locations.
 
-## Documentación Técnica
-
-## Acceso a la Aplicación
-La aplicación desarrollada está accesible en línea a través de la siguiente URL:
+## Application Access
+The developed application is accessible online via the following URL:
 [https://studenti.di.unimi.it/juan.barearojo@studenti.unimi.it](https://studenti.di.unimi.it/juan.barearojo@studenti.unimi.it) 🌐
+
