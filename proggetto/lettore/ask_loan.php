@@ -21,21 +21,21 @@
 
         </div>
         <div class="container mt-4" style="max-width: 500px;">
-            <form action="../functions/search_book_function.php" method="post">
+            <form action="../functions/ask_loan_function.php" method="post">
                 <div class="form-group">
                     <label for="ISBN">ISBN:</label>
-                    <input class="form-control" type="text" id="ISBN" name="ISBN" required>
+                    <input class="form-control" type="text" id="ISBN" name="ISBN">
                 </div>
                 <div class="form-group">
                     <label for="title">Title:</label>
-                    <input class="form-control" type="title" id="title" name="title" required>
+                    <input class="form-control" type="title" id="title" name="title">
                 </div>
                 <div class="form-group">
                     <label for="library">Location id:</label>
                     <input class="form-control" type="title" id="library_id" name="library_id" required>
                 </div>
                 <div class="form-group text-center">
-                    <input class="btn btn-primary btn-lg" type="submit" value="Search by ISBN">
+                    <input class="btn btn-primary btn-lg" type="submit" value="Ask for a loan">
                 </div>
             </form>
         </div>

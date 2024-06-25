@@ -37,7 +37,7 @@ if ($result === false) {
     session_destroy();
 
     echo "<script>alert('Password changed successfully. Please log in again.');</script>";
-    echo "<script>window.location.href = '../../login.php';</script>";
+    echo "<script>window.location.href = '../../index.php';</script>";
 }
 
 // Liberar el resultado y cerrar la conexión
