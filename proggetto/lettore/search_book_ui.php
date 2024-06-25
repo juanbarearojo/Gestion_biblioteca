@@ -21,7 +21,7 @@
 
         </div>
         <div class="container mt-4" style="max-width: 500px;">
-            <form action="../functions/search_book.php" method="post">
+            <form action="../functions/search_book_function.php" method="post">
                 <div class="form-group">
                     <label for="ISBN">ISBN:</label>
                     <input class="form-control" type="text" id="ISBN" name="ISBN" required>
@@ -31,7 +31,7 @@
                 </div>
             </form>
 
-            <form action="../functions/search_book.php" method="post">
+            <form action="../functions/search_book_function.php" method="post">
                 <div class="form-group">
                     <label for="title">Title:</label>
                     <input class="form-control" type="title" id="title" name="title" required>
