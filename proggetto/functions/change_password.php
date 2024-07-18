@@ -2,10 +2,7 @@
 session_start(); // Iniciar la sesión
 
 // Configuración de la base de datos
-$host = "postgres";
-$dbname = "juan_barearojo_proggetto";
-$user = "juan_barearojo";
-$password = "Jbr_02062003+(SQL)";
+
 
 $db = pg_connect("host=$host dbname=$dbname user=$user password=$password");
 if (!$db) {

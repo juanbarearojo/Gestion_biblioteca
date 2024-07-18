@@ -3,11 +3,6 @@ session_start(); // Iniciar la sesión antes de cualquier salida
 
 // Función para abrir la conexión a PostgreSQL
 
-$host = "postgres";
-$dbname = "juan_barearojo_proggetto";
-$user = "juan_barearojo";
-$password = "Jbr_02062003+(SQL)";
-
 $db = pg_connect("host=$host dbname=$dbname user=$user password=$password");
 if (!$db) {
     die("Conexión a la base de datos fallida: " . pg_last_error());

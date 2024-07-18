@@ -15,5 +15,5 @@ $$ LANGUAGE plpgsql;
 CREATE TRIGGER before_update_loan
 BEFORE UPDATE ON loan
 FOR EACH ROW
-WHEN (OLD.expected_return_date <> NEW.expected_return_date)
+WHEN (OLD.expected_return_date <> NEW.expected_return_date) -- se activa en el cambio comprobar que es <>
 EXECUTE FUNCTION check_loan_extension();

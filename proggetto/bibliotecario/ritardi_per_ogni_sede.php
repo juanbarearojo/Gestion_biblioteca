@@ -2,11 +2,7 @@
 session_start(); // Iniciar la sesión antes de cualquier salida
 $username = $_SESSION['username'];
 
-// Función para abrir la conexión a PostgreSQL
-$host = "postgres";
-$dbname = "juan_barearojo_proggetto";
-$user = "juan_barearojo";
-$password = "Jbr_02062003+(SQL)";
+
 
 $db = pg_connect("host=$host dbname=$dbname user=$user password=$password");
 if (!$db) {
